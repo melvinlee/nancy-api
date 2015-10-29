@@ -77,9 +77,11 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="IndexModule.cs" />
+    <Compile Include="Model\NextIdHelper.cs" />
     <Compile Include="Model\IEntity.cs" />
     <Compile Include="Model\Tunnel.cs" />
     <Compile Include="Modules\TunnelApiModule.cs" />
+    <Compile Include="Modules\TunnelResponseExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\TunnelRepository.cs" />
   </ItemGroup>

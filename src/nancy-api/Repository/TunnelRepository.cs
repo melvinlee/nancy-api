@@ -75,5 +75,12 @@ namespace NancyApi.Repository
         {
             return Tunnels.SingleOrDefault(x => x.Id == id);
         }
+
+        public Tunnel Add(Tunnel tunnel)
+        {
+            tunnel.Id = Tunnels.NextId();
+            _tunnels.Add(tunnel);
+            return tunnel;
+        }
     }
 }
