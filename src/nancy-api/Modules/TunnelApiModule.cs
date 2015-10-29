@@ -50,6 +50,13 @@ namespace NancyApi.Modules
                 return Response.AsNewTunnel(newModel);
             };
 
+            Delete["/{id}"] = p =>
+                {
+                    double outvalue;
+                    if (!double.TryParse(p.id, out outvalue)) return HttpStatusCode.NoContent;
+
+                    return tunnelRepository.Delete(p.id) ? HttpStatusCode.Accepted : HttpStatusCode.NoContent;
+                };
         }
     }
 }

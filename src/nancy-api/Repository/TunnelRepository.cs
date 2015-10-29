@@ -82,5 +82,18 @@ namespace NancyApi.Repository
             _tunnels.Add(tunnel);
             return tunnel;
         }
+
+        public bool Delete(int id)
+        {
+            var foundItem = _tunnels.SingleOrDefault(x => x.Id == id);
+
+            if (foundItem != null)
+            {
+                _tunnels.Remove(foundItem);
+                return true;
+            }
+
+            return false;
+        }
     }
 }
