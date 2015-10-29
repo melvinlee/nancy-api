@@ -2,7 +2,7 @@
 using System.Globalization;
 using Nancy;
 using NancyApi.Model;
-using nancyapi.Repository;
+using NancyApi.Repository;
 
 namespace NancyApi.Modules
 {
