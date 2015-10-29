@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using NancyApi.Model;
 
-namespace nancyapi.Repository
+namespace NancyApi.Repository
 {
     public class TunnelRepository
     {

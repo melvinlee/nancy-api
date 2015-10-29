@@ -1,7 +1,7 @@
-﻿namespace nancy_api
-{
-    using Nancy;
+﻿using Nancy;
 
+namespace NancyApi
+{
     public class Bootstrapper : DefaultNancyBootstrapper
     {
         // The bootstrapper enables you to reconfigure the composition of the framework,

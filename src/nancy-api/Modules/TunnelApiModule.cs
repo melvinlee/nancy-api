@@ -4,7 +4,7 @@ using Nancy;
 using NancyApi.Model;
 using nancyapi.Repository;
 
-namespace nancyapi.Modules
+namespace NancyApi.Modules
 {
     public class TunnelApiModule : NancyModule
     {

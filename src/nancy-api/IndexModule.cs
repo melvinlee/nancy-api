@@ -1,7 +1,7 @@
-﻿namespace nancy_api
-{
-    using Nancy;
+﻿using Nancy;
 
+namespace NancyApi
+{
     public class IndexModule : NancyModule
     {
         public IndexModule()
