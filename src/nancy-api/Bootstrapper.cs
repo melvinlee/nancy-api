@@ -16,5 +16,10 @@ namespace NancyApi
             // Register repository as singleton for persistant data source
             container.Register<TunnelRepository>().AsSingleton();
         }
+
+        protected override byte[] FavIcon
+        {
+            get { return null; }
+        }
     }
 }
