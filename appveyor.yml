@@ -5,5 +5,5 @@ before_build:
 build:
   verbosity: minimal
 artifacts:
-- path: '\src\nancy-api\bin\$(configuration)\'
+- path: '\src\nancy-api\bin\Release\'
   name: nancy-api
