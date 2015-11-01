@@ -1,4 +1,5 @@
 ﻿using Nancy;
+using NancyApi.Helper;
 using NancyApi.Repository;
 
 namespace NancyApi
@@ -15,6 +16,9 @@ namespace NancyApi
 
             // JsonP support
             Jsonp.Enable(pipelines);
+
+            // Enable CORS
+            pipelines.EnableCors();
 
             // Register repository as singleton for persistant data source
             container.Register<TunnelRepository>().AsSingleton();
