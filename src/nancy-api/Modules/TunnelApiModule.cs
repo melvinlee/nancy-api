@@ -26,7 +26,12 @@ namespace NancyApi.Modules
 
             Get["/"] = p => Response.AsJson(tunnelRepository.Tunnels);
 
-            Get["/{id}"] = p => Response.AsJson((Tunnel)tunnelRepository.Get(p.id));
+            Get["/{id}"] = p =>
+                {
+                    var response = tunnelRepository.Get(p.id);
+
+                    return response == null ? HttpStatusCode.NotFound : Response.AsJson((Tunnel)response);
+                };
 
             Post["/", c => c.Request.Headers.ContentType != "application/x-www-urlencoded"] = p =>
             {
