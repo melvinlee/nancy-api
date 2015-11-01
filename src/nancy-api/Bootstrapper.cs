@@ -13,6 +13,9 @@ namespace NancyApi
         {
             base.ApplicationStartup(container, pipelines);
 
+            // JsonP support
+            Jsonp.Enable(pipelines);
+
             // Register repository as singleton for persistant data source
             container.Register<TunnelRepository>().AsSingleton();
         }
