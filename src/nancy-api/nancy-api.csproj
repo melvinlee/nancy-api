@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Dto\TunnelsDto.cs" />
     <Compile Include="Helper\NancyExtension.cs" />
     <Compile Include="IndexModule.cs" />
     <Compile Include="Model\NextIdHelper.cs" />

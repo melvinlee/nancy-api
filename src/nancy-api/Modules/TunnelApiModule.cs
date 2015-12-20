@@ -4,6 +4,8 @@ using Nancy;
 using Nancy.ModelBinding;
 using NancyApi.Model;
 using NancyApi.Repository;
+using NancyApi.Dto;
+using System.Collections.Generic;
 
 namespace NancyApi.Modules
 {
@@ -24,7 +26,13 @@ namespace NancyApi.Modules
                 ctx.Response.WithHeader("x-processing-time", processTime.ToString(CultureInfo.InvariantCulture));
             };
 
-            Get["/"] = p => Response.AsJson(tunnelRepository.Tunnels);
+            Get["/"] = p =>
+            {
+                var dto = new TunnelsDto();
+                dto.Tunnels = new List<Tunnel>(tunnelRepository.Tunnels);
+                
+                return Negotiate.AsGetResponse(dto);
+            };
 
             Get["/{id}"] = p =>
                 {
