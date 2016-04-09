@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Globalization;
-using Nancy;
-using Nancy.ModelBinding;
-using NancyApi.Model;
-using NancyApi.Repository;
-using NancyApi.Dto;
 using System.Collections.Generic;
+using System.Globalization;
+using Nancy.Model;
+using Nancy.Model.Dto;
+using Nancy.ModelBinding;
+using Nancy.Repository;
 
-namespace NancyApi.Modules
+namespace Nancy.WebAPI.Modules
 {
     public class TunnelApiModule : NancyModule
     {

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nancy-api", "src\nancy-api\nancy-api.csproj", "{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.WebAPI", "src\Nancy.WebAPI\Nancy.WebAPI.csproj", "{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6BB27DEE-8DFF-4FC4-9F45-C57E3D620C38}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6BB27D
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Repository", "src\Nancy.Repository\Nancy.Repository.csproj", "{FFF482F0-0BBA-444F-AF7E-E07869A2D685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Model", "src\Nancy.Model\Nancy.Model.csproj", "{78CCFCA3-E563-4E59-814F-099A66FE4737}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +26,14 @@ Global
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF482F0-0BBA-444F-AF7E-E07869A2D685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF482F0-0BBA-444F-AF7E-E07869A2D685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF482F0-0BBA-444F-AF7E-E07869A2D685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF482F0-0BBA-444F-AF7E-E07869A2D685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CCFCA3-E563-4E59-814F-099A66FE4737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CCFCA3-E563-4E59-814F-099A66FE4737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CCFCA3-E563-4E59-814F-099A66FE4737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CCFCA3-E563-4E59-814F-099A66FE4737}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Nancy.Bootstrapper;
 
-namespace NancyApi.Helper
+namespace Nancy.WebAPI.Helper
 {
     public static class NancyExtension
     {

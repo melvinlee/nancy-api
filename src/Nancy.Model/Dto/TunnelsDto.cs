@@ -1,8 +1,7 @@
-﻿using NancyApi.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace NancyApi.Dto
+namespace Nancy.Model.Dto
 {
     [XmlRoot(ElementName = "Response")]
     public class TunnelsDto

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace NancyApi.Model
+namespace Nancy.Model
 {
     public static class NextIdHelper
     {

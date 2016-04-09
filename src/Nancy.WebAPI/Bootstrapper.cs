@@ -1,8 +1,7 @@
-﻿using Nancy;
-using NancyApi.Helper;
-using NancyApi.Repository;
+﻿using Nancy.Repository;
+using Nancy.WebAPI.Helper;
 
-namespace NancyApi
+namespace Nancy.WebAPI
 {
     public class Bootstrapper : DefaultNancyBootstrapper
     {

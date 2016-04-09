@@ -1,4 +1,4 @@
-﻿namespace NancyApi.Model
+﻿namespace Nancy.Model
 {
     public class Tunnel : IEntity
     {

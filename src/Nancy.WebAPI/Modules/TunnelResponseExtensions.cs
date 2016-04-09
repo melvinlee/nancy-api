@@ -1,13 +1,12 @@
-﻿using Nancy;
-using NancyApi.Model;
+﻿using Nancy.Model;
 
-namespace NancyApi.Modules
+namespace Nancy.WebAPI.Modules
 {
     public static class TunnelResponseExtensions
     {
         public static Response AsNewTunnel(this IResponseFormatter formatter, Tunnel tunnel)
         {
-            var url = string.Format("{0}/{1}", formatter.Context.Request.Url, tunnel.Id);
+            var url = $"{formatter.Context.Request.Url}/{tunnel.Id}";
 
             return new Response()
                 {

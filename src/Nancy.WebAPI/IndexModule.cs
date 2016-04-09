@@ -1,6 +1,4 @@
-﻿using Nancy;
-
-namespace NancyApi
+﻿namespace Nancy.WebAPI
 {
     public class IndexModule : NancyModule
     {

@@ -1,7 +1,6 @@
-﻿using Nancy;
-using Nancy.Responses.Negotiation;
+﻿using Nancy.Responses.Negotiation;
 
-namespace NancyApi
+namespace Nancy.WebAPI
 {
     public static class NegotiateExtensions
     {
