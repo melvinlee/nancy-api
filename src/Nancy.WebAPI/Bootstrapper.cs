@@ -20,12 +20,9 @@ namespace Nancy.WebAPI
             pipelines.EnableCors();
 
             // Register repository as singleton for persistant data source
-            container.Register<TunnelRepository>().AsSingleton();
+            container.Register<ITunnelRepository,TunnelRepository>().AsSingleton();
         }
 
-        protected override byte[] FavIcon
-        {
-            get { return null; }
-        }
+        protected override byte[] FavIcon => null;
     }
 }

@@ -5,7 +5,7 @@ using Nancy.Model;
 
 namespace Nancy.Repository
 {
-    public class TunnelRepository
+    public class TunnelRepository : ITunnelRepository
     {
         private IList<Tunnel> _tunnels;
 

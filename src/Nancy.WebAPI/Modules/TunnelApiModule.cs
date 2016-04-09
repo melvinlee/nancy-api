@@ -10,9 +10,13 @@ namespace Nancy.WebAPI.Modules
 {
     public class TunnelApiModule : NancyModule
     {
-        public TunnelApiModule(TunnelRepository tunnelRepository)
+        private readonly ITunnelRepository _tunnelRepository;
+
+        public TunnelApiModule(ITunnelRepository tunnelRepository)
             : base("api/tunnel")
         {
+            _tunnelRepository = tunnelRepository;
+
             Before += ctx =>
             {
                 ctx.Items.Add("start_time", DateTime.UtcNow);
@@ -27,9 +31,8 @@ namespace Nancy.WebAPI.Modules
 
             Get["/"] = p =>
             {
-                var dto = new TunnelsDto();
-                dto.Tunnels = new List<Tunnel>(tunnelRepository.Tunnels);
-                
+                var dto = new TunnelsDto {Tunnels = new List<Tunnel>(_tunnelRepository.Tunnels)};
+
                 return Negotiate.AsGetResponse(dto);
             };
 
@@ -43,7 +46,7 @@ namespace Nancy.WebAPI.Modules
             Post["/", c => c.Request.Headers.ContentType != "application/x-www-urlencoded"] = p =>
             {
                 var model = this.Bind<Tunnel>();
-                tunnelRepository.Add(model);
+                _tunnelRepository.Add(model);
                 return Response.AsNewTunnel(model);
             };
 
@@ -58,7 +61,7 @@ namespace Nancy.WebAPI.Modules
                         Year = Request.Form.Year
                     };
 
-                var newModel = tunnelRepository.Add(model);
+                var newModel = _tunnelRepository.Add(model);
                 return Response.AsNewTunnel(newModel);
             };
 
@@ -67,7 +70,7 @@ namespace Nancy.WebAPI.Modules
                     double outvalue;
                     if (!double.TryParse(p.id, out outvalue)) return HttpStatusCode.NoContent;
 
-                    return tunnelRepository.Delete(p.id) ? HttpStatusCode.Accepted : HttpStatusCode.NoContent;
+                    return _tunnelRepository.Delete(p.id) ? HttpStatusCode.Accepted : HttpStatusCode.NoContent;
                 };
         }
     }
